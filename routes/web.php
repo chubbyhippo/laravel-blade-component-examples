@@ -25,5 +25,5 @@ Route::get('/comments/{comment}/edit', function (Comment $comment) {
 Route::patch('/comments/{comment}', function (Comment $comment) {
     $comment->update(request()->validate(['body' => 'required|string']));
 
-    return redirect('/comments/{$comment->id/edit}');
+    return redirect("/comments/{$comment->id}/edit");
 });
